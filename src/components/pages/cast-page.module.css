@@ -1,0 +1,38 @@
+.castTitle {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .castList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .castItem {
+    list-style: none;
+    width: 200px;
+    border-radius: 0px 0px 4px 4px;
+  
+  }
+
+  .castActorImage {
+  
+    width: 200px;
+  }
+
+  .castActorInfo {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .castActorName {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .castActorCharacter {
+    margin-top: 10px;
+  }

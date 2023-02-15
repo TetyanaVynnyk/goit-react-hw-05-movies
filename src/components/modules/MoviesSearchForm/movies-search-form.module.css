@@ -1,0 +1,14 @@
+.searchInput {
+  width: 400px;
+  margin-right: 5px;
+}
+.searchInput:hover {
+  border-color: yellow;
+}
+.searchBtn {
+  border-radius: 10%;
+}
+.searchBtn:hover,
+.searchBtn:focus {
+  background-color: yellow;
+}
