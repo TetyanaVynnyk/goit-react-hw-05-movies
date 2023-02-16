@@ -1,11 +1,11 @@
-.MovieDetailsContainer {
+.movieDetailsContainer {
   display: flex;
   flex-direction: row;
   flex: 1 0 100%;
   padding: 50px 0px;
 }
 
-.MovieDetailsImage {
+.movieDetailsImage {
   display: flex;
   flex: 1 0 30%;
   justify-content: center;
@@ -15,17 +15,17 @@
   width: 200px;
 }
 
-.MovieDetailsDescription {
+.movieDetailsDescription {
   flex: 1 0 70%;
 }
 
-.MovieDetailsTitle {
+.movieDetailsTitle {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
-.MovieDetailsSubTitle {
+.movieDetailsSubTitle {
   font-weight: 700;
   padding: 20px 0px 10px 0px;
 }
@@ -39,22 +39,22 @@
   background-color: yellow;
 }
 
-.MovieDetailsInfo {
+.movieDetailsInfo {
   padding-left: 30px;
   border-bottom: 1px solid black;
 }
 
-.MovieDetailsSubInfo {
+.movieDetailsSubInfo {
   font-size: 18px;
   font-weight: 700;
 }
 
-.MovieDetailsTextInfo {
+.movieDetailsTextInfo {
   display: flex;
   flex-direction: column;
 }
 
-.MovieDetailsTextInfo.a {
+.movieDetailsTextInfo.a {
   padding-top: 5px;
 }
 

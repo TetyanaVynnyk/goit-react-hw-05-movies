@@ -69,8 +69,8 @@ const MoviesDetailsPage = () => {
       </button>
       {loading && <Loader />}
       {error && <p>{error.massage}</p>}
-      <div className={styles.MovieDetailsContainer}>
-        <div className={styles.MovieDetailsImage}>
+      <div className={styles.movieDetailsContainer}>
+        <div className={styles.movieDetailsImage}>
           <img className={styles.image}
             src={
               poster_path === undefined
@@ -80,18 +80,18 @@ const MoviesDetailsPage = () => {
             alt=""
           ></img>
         </div>
-        <div className={styles.MovieDetailsDescription}>
-          <h2 className={styles.MovieDetailsTitle}>{title}</h2>
+        <div className={styles.movieDetailsDescription}>
+          <h2 className={styles.movieDetailsTitle}>{title}</h2>
           {vote_average > 0 && Score}
-          <p className={styles.MovieDetailsSubTitle}>Brief description</p>
+          <p className={styles.movieDetailsSubTitle}>Brief description</p>
           <p>{overview !== '' ? overview : 'No brief description'}</p>
-          <p className={styles.MovieDetailsSubTitle}>Genres</p>
+          <p className={styles.movieDetailsSubTitle}>Genres</p>
           <p>{genresList !== '' ? genresList : 'Genres not found'}</p>
         </div>
       </div>
-      <div className={styles.MovieDetailsInfo}>
-        <p className={styles.MovieDetailsSubInfo}>Additional information:</p>
-        <div className={styles.MovieDetailsTextInfo}>
+      <div className={styles.movieDetailsInfo}>
+        <p className={styles.movieDetailsSubInfo}>Additional information:</p>
+        <div className={styles.movieDetailsTextInfo}>
           <Link className={styles.link} state={{ from }} to={`cast`}>
             Cast
           </Link>
