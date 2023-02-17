@@ -41,8 +41,7 @@ const MoviesDetailsPage = () => {
     getTrandingMovie(movieId);
   }, [movieId]);
 
-  const { title, poster_path, overview, genres, vote_average } =
-    movies;
+  const { title, poster_path, overview, genres, vote_average } = movies;
 
   const genresList = genres?.map(genre => genre.name).join(', ');
 
@@ -55,7 +54,7 @@ const MoviesDetailsPage = () => {
     return (
       <p className={styles.MovieDetailsUserScore}>
         User score:&ensp;
-        {userScorePecentage}% 
+        {userScorePecentage}%
       </p>
     );
   };
@@ -69,26 +68,29 @@ const MoviesDetailsPage = () => {
       </button>
       {loading && <Loader />}
       {error && <p>{error.massage}</p>}
-      <div className={styles.movieDetailsContainer}>
-        <div className={styles.movieDetailsImage}>
-          <img className={styles.image}
-            src={
-              poster_path === undefined
-                ? `poster not found`
-                : `https://image.tmdb.org/t/p/w500${poster_path}`
-            }
-            alt=""
-          ></img>
+      {movies && (
+        <div className={styles.movieDetailsContainer}>
+          <div className={styles.movieDetailsImage}>
+            <img
+              className={styles.image}
+              src={
+                poster_path === undefined
+                  ? `poster not found`
+                  : `https://image.tmdb.org/t/p/w500${poster_path}`
+              }
+              alt=""
+            ></img>
+          </div>
+          <div className={styles.movieDetailsDescription}>
+            <h2 className={styles.movieDetailsTitle}>{title}</h2>
+            {vote_average > 0 && Score}
+            <p className={styles.movieDetailsSubTitle}>Brief description</p>
+            <p>{overview !== '' ? overview : 'No brief description'}</p>
+            <p className={styles.movieDetailsSubTitle}>Genres</p>
+            <p>{genresList !== '' ? genresList : 'Genres not found'}</p>
+          </div>
         </div>
-        <div className={styles.movieDetailsDescription}>
-          <h2 className={styles.movieDetailsTitle}>{title}</h2>
-          {vote_average > 0 && Score}
-          <p className={styles.movieDetailsSubTitle}>Brief description</p>
-          <p>{overview !== '' ? overview : 'No brief description'}</p>
-          <p className={styles.movieDetailsSubTitle}>Genres</p>
-          <p>{genresList !== '' ? genresList : 'Genres not found'}</p>
-        </div>
-      </div>
+      )}
       <div className={styles.movieDetailsInfo}>
         <p className={styles.movieDetailsSubInfo}>Additional information:</p>
         <div className={styles.movieDetailsTextInfo}>

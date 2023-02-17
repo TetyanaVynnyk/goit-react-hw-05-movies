@@ -33,7 +33,7 @@ const Homepage = () => {
       {loading && <Loader />}
       {error && <p>{error.massage}</p>}
       {items.length > 0 && (
-        <MoviesList items={items} loading={loading} error={error} />
+        <MoviesList items={items}/>
       )}
     </div>
   );
